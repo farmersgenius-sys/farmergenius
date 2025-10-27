@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Farming Worldwide - Farmer Genius</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Toggle Button -->
+    <button class="nav-toggle" id="navToggle" onclick="toggleNavigation()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Farmer Genius Logo" class="logo-image">
+                <span data-en="Farmer Genius" data-hi="किसान जीनियस">Farmer Genius</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item" style="--delay: 1;"><a href="index.html" class="nav-link" data-en="Home" data-hi="होम">Home</a></li>
+                <li class="nav-item" style="--delay: 2;"><a href="tools.html" class="nav-link" data-en="Farming Tools" data-hi="कृषि उपकरण">Farming Tools</a></li>
+                <li class="nav-item" style="--delay: 3;"><a href="schemes.html" class="nav-link" data-en="Government Schemes" data-hi="सरकारी योजनाएं">Government Schemes</a></li>
+                <li class="nav-item" style="--delay: 4;"><a href="modern-farming.html" class="nav-link active" data-en="Modern Farming" data-hi="आधुनिक कृषि">Modern Farming</a></li>
+                <li class="nav-item" style="--delay: 5;"><a href="knowledge.html" class="nav-link" data-en="Knowledge Hub" data-hi="ज्ञान केंद्र">Knowledge Hub</a></li>
+                <li class="nav-item" style="--delay: 6;"><a href="helpline.html" class="nav-link" data-en="Helpline" data-hi="हेल्पलाइन">Helpline</a></li>
+                <li class="nav-item" style="--delay: 7;"><a href="settings.html" class="nav-link" data-en="Settings" data-hi="सेटिंग्स">Settings</a></li>
+                <li class="nav-item" style="--delay: 8;"><a href="#" class="nav-link" onclick="toggleChatWidget()" data-en="AI Assistant" data-hi="AI सहायक">AI Assistant</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-en="Modern Farming Worldwide" data-hi="विश्वभर में आधुनिक खेती">Modern Farming Worldwide</h1>
+            <p class="page-subtitle" data-en="Global agricultural innovations and techniques adapted for Indian farming conditions" data-hi="भारतीय खेती के लिए अनुकूलित वैश्विक कृषि नवाचार और तकनीकें">Global agricultural innovations and techniques adapted for Indian farming conditions</p>
+        </div>
+    </section>
+
+    <!-- Modern Techniques Section -->
+    <section class="techniques-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Advanced Farming Techniques" data-hi="उन्नत खेती तकनीकें">Advanced Farming Techniques</h2>
+                <p class="section-description" data-en="Learn cutting-edge agricultural practices from around the world, customized for Indian farmers" data-hi="भारतीय किसानों के लिए अनुकूलित दुनिया भर की अत्याधुनिक कृषि प्रथाओं को सीखें">Learn cutting-edge agricultural practices from around the world, customized for Indian farmers</p>
+            </div>
+            
+            <div class="techniques-grid">
+                <!-- Precision Agriculture -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Precision Agriculture" data-hi="सटीक कृषि">Precision Agriculture</h3>
+                        <div class="origin-badge" data-en="🇺🇸 USA / 🇳🇱 Netherlands" data-hi="🇺🇸 अमेरिका / 🇳🇱 नीदरलैंड">🇺🇸 USA / 🇳🇱 Netherlands</div>
+                        <p class="technique-description" data-en="GPS-guided farming using satellite imagery and sensors to optimize field-level management of crops." data-hi="फसलों के क्षेत्र-स्तरीय प्रबंधन को अनुकूलित करने के लिए उपग्रह छवियों और सेंसर का उपयोग करते हुए GPS-निर्देशित खेती।">GPS-guided farming using satellite imagery and sensors to optimize field-level management of crops.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Use affordable smartphone apps like CropIn and FarmLogs" data-hi="CropIn और FarmLogs जैसे किफायती स्मार्टफोन ऐप्स का उपयोग करें">Use affordable smartphone apps like <strong>CropIn</strong> and <strong>FarmLogs</strong></li>
+                                <li data-en="Adopt drone services available through government schemes (₹50-100/acre)" data-hi="सरकारी योजनाओं के माध्यम से उपलब्ध ड्रोन सेवाओं को अपनाएं (₹50-100/एकड़)">Adopt <strong>drone services</strong> available through government schemes (₹50-100/acre)</li>
+                                <li data-en="Partner with local cooperatives for shared GPS equipment" data-hi="साझा GPS उपकरण के लिए स्थानीय सहकारी समितियों के साथ साझेदारी करें">Partner with local cooperatives for shared GPS equipment</li>
+                                <li data-en="Start with basic soil testing and variable rate fertilizer application" data-hi="बुनियादी मिट्टी परीक्षण और परिवर्तनशील दर उर्वरक अनुप्रयोग से शुरुआत करें">Start with basic soil testing and variable rate fertilizer application</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• 15-20% reduction in fertilizer costs • 10-15% increase in yield • Better water management" data-hi="• उर्वरक लागत में 15-20% की कमी • उपज में 10-15% की वृद्धि • बेहतर जल प्रबंधन">• 15-20% reduction in fertilizer costs • 10-15% increase in yield • Better water management</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Farming -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Vertical & Hydroponic Farming" data-hi="ऊर्ध्वाधर और हाइड्रोपोनिक खेती">Vertical & Hydroponic Farming</h3>
+                        <div class="origin-badge" data-en="🇯🇵 Japan / 🇸🇬 Singapore" data-hi="🇯🇵 जापान / 🇸🇬 सिंगापुर">🇯🇵 Japan / 🇸🇬 Singapore</div>
+                        <p class="technique-description" data-en="Growing crops in vertically stacked layers using nutrient solutions instead of soil." data-hi="मिट्टी के बजाय पोषक तत्व समाधान का उपयोग करके ऊर्ध्वाधर रूप से स्टैक्ड परतों में फसलें उगाना।">Growing crops in vertically stacked layers using nutrient solutions instead of soil.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Start with leafy vegetables (spinach, lettuce, herbs) in small setups" data-hi="छोटे सेटअप में पत्तेदार सब्जियों (पालक, सलाद, जड़ी-बूटियां) से शुरुआत करें">Start with <strong>leafy vegetables</strong> (spinach, lettuce, herbs) in small setups</li>
+                                <li data-en="Use locally available PVC pipes and simple pump systems" data-hi="स्थानीय रूप से उपलब्ध PVC पाइप और सरल पंप सिस्टम का उपयोग करें">Use locally available PVC pipes and simple pump systems</li>
+                                <li data-en="Perfect for urban areas and small landholders" data-hi="शहरी क्षेत्रों और छोटे भूमिधारकों के लिए उपयुक्त">Perfect for urban areas and small landholders</li>
+                                <li data-en="Government subsidy available under MIDH scheme (up to 40%)" data-hi="MIDH योजना के तहत सरकारी सब्सिडी उपलब्ध (40% तक)">Government subsidy available under <strong>MIDH scheme</strong> (up to 40%)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• 95% less water usage • Year-round production • Higher price for premium vegetables" data-hi="• 95% कम पानी का उपयोग • साल भर उत्पादन • प्रीमियम सब्जियों के लिए अधिक कीमत">• 95% less water usage • Year-round production • Higher price for premium vegetables</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conservation Agriculture -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Conservation Agriculture" data-hi="संरक्षण कृषि">Conservation Agriculture</h3>
+                        <div class="origin-badge" data-en="🇧🇷 Brazil / 🇦🇷 Argentina" data-hi="🇧🇷 ब्राज़ील / 🇦🇷 अर्जेंटीना">🇧🇷 Brazil / 🇦🇷 Argentina</div>
+                        <p class="technique-description" data-en="Sustainable farming based on three principles: minimal soil disturbance, permanent soil cover, and crop rotation." data-hi="तीन सिद्धांतों पर आधारित टिकाऊ खेती: न्यूनतम मिट्टी गड़बड़ी, स्थायी मिट्टी आवरण और फसल चक्र।">Sustainable farming based on three principles: minimal soil disturbance, permanent soil cover, and crop rotation.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Adopt Zero Till / No-Till farming practices" data-hi="जीरो टिल / नो-टिल खेती प्रथाओं को अपनाएं">Adopt <strong>Zero Till</strong> / <strong>No-Till</strong> farming practices</li>
+                                <li data-en="Use crop residue as mulch instead of burning" data-hi="जलाने के बजाय फसल अवशेष को मल्च के रूप में उपयोग करें">Use crop residue as mulch instead of burning</li>
+                                <li data-en="Rotate crops: Rice-Wheat with legumes like chickpea" data-hi="फसल चक्र: चना जैसी दलहन के साथ धान-गेहूं">Rotate crops: Rice-Wheat with legumes like chickpea</li>
+                                <li data-en="Access machinery through Custom Hiring Centers (CHCs)" data-hi="कस्टम हायरिंग सेंटर (CHCs) के माध्यम से मशीनरी का उपयोग करें">Access machinery through Custom Hiring Centers (CHCs)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• 30-40% reduction in cultivation costs • Improved soil health • Reduced pollution" data-hi="• खेती की लागत में 30-40% की कमी • मिट्टी के स्वास्थ्य में सुधार • प्रदूषण में कमी">• 30-40% reduction in cultivation costs • Improved soil health • Reduced pollution</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Irrigation -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Smart Irrigation Systems" data-hi="स्मार्ट सिंचाई प्रणाली">Smart Irrigation Systems</h3>
+                        <div class="origin-badge" data-en="🇮🇱 Israel / 🇦🇺 Australia" data-hi="🇮🇱 इज़राइल / 🇦🇺 ऑस्ट्रेलिया">🇮🇱 Israel / 🇦🇺 Australia</div>
+                        <p class="technique-description" data-en="Automated irrigation systems using soil moisture sensors and weather data to optimize water usage." data-hi="जल उपयोग को अनुकूलित करने के लिए मिट्टी की नमी सेंसर और मौसम डेटा का उपयोग करने वाली स्वचालित सिंचाई प्रणाली।">Automated irrigation systems using soil moisture sensors and weather data to optimize water usage.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Start with simple tensiometer-based systems" data-hi="सरल टेंशियोमीटर-आधारित प्रणाली से शुरुआत करें">Start with simple <strong>tensiometer-based systems</strong></li>
+                                <li data-en="Use IoT sensors through government's Digital India Agriculture initiatives" data-hi="सरकार की डिजिटल इंडिया कृषि पहल के माध्यम से IoT सेंसर का उपयोग करें">Use <strong>IoT sensors</strong> through government's Digital India Agriculture initiatives</li>
+                                <li data-en="Combine with drip irrigation (55% subsidy available)" data-hi="ड्रिप सिंचाई के साथ जोड़ें (55% सब्सिडी उपलब्ध)">Combine with drip irrigation (55% subsidy available)</li>
+                                <li data-en="Mobile app integration for remote monitoring" data-hi="दूरस्थ निगरानी के लिए मोबाइल ऐप एकीकरण">Mobile app integration for remote monitoring</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• 40-50% water savings • 20-25% yield increase • Reduced labor costs" data-hi="• 40-50% जल बचत • 20-25% उपज वृद्धि • श्रम लागत में कमी">• 40-50% water savings • 20-25% yield increase • Reduced labor costs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrated Pest Management -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Integrated Pest Management (IPM)" data-hi="एकीकृत कीट प्रबंधन (IPM)">Integrated Pest Management (IPM)</h3>
+                        <div class="origin-badge" data-en="🇺🇸 USA / 🇪🇺 Europe" data-hi="🇺🇸 अमेरिका / 🇪🇺 यूरोप">🇺🇸 USA / 🇪🇺 Europe</div>
+                        <p class="technique-description" data-en="Ecosystem-based approach combining biological, cultural, and chemical controls to manage pests sustainably." data-hi="कीटों को टिकाऊ तरीके से प्रबंधित करने के लिए जैविक, सांस्कृतिक और रासायनिक नियंत्रण को संयोजित करने वाला पारिस्थितिक-आधारित दृष्टिकोण।">Ecosystem-based approach combining biological, cultural, and chemical controls to manage pests sustainably.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Use local beneficial insects and bio-pesticides" data-hi="स्थानीय लाभकारी कीड़ों और जैव-कीटनाशकों का उपयोग करें">Use local beneficial insects and <strong>bio-pesticides</strong></li>
+                                <li data-en="Install pheromone traps and light traps" data-hi="फेरोमोन ट्रैप और लाइट ट्रैप लगाएं">Install <strong>pheromone traps</strong> and light traps</li>
+                                <li data-en="Practice companion planting (marigold with tomatoes)" data-hi="साथी पौधे रोपण का अभ्यास करें (टमाटर के साथ गेंदे)">Practice companion planting (marigold with tomatoes)</li>
+                                <li data-en="Access bio-control agents from KVKs and state agriculture departments" data-hi="KVKs और राज्य कृषि विभागों से जैव-नियंत्रण एजेंट प्राप्त करें">Access <strong>bio-control agents</strong> from KVKs and state agriculture departments</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• 60-70% reduction in pesticide use • Healthier crops • Premium prices for residue-free produce" data-hi="• कीटनाशक उपयोग में 60-70% की कमी • स्वस्थ फसलें • अवशेष-मुक्त उपज के लिए प्रीमियम कीमत">• 60-70% reduction in pesticide use • Healthier crops • Premium prices for residue-free produce</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Climate-Smart Agriculture -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Climate-Smart Agriculture" data-hi="जलवायु-स्मार्ट कृषि">Climate-Smart Agriculture</h3>
+                        <div class="origin-badge" data-en="🇰🇪 Kenya / 🇲🇽 Mexico" data-hi="🇰🇪 केन्या / 🇲🇽 मेक्सिको">🇰🇪 Kenya / 🇲🇽 Mexico</div>
+                        <p class="technique-description" data-en="Agricultural practices that sustainably increase productivity while adapting to climate change." data-hi="कृषि प्रथाएं जो जलवायु परिवर्तन के अनुकूल होते हुए टिकाऊ तरीके से उत्पादकता बढ़ाती हैं।">Agricultural practices that sustainably increase productivity while adapting to climate change.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Adopt drought-resistant varieties from ICAR institutes" data-hi="ICAR संस्थानों से सूखा-प्रतिरोधी किस्मों को अपनाएं">Adopt <strong>drought-resistant varieties</strong> from ICAR institutes</li>
+                                <li data-en="Use weather forecast apps like Meghdoot and Damini" data-hi="मेघदूत और दामिनी जैसे मौसम पूर्वानुमान ऐप का उपयोग करें">Use weather forecast apps like <strong>Meghdoot</strong> and <strong>Damini</strong></li>
+                                <li data-en="Practice rainwater harvesting and farm pond construction" data-hi="वर्षा जल संचयन और फार्म तालाब निर्माण का अभ्यास करें">Practice <strong>rainwater harvesting</strong> and farm pond construction</li>
+                                <li data-en="Diversify crops based on local climate patterns" data-hi="स्थानीय जलवायु पैटर्न के आधार पर फसलों में विविधता लाएं">Diversify crops based on local climate patterns</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• Climate resilience • Risk reduction • Stable income despite weather variations" data-hi="• जलवायु लचीलापन • जोखिम में कमी • मौसम की भिन्नता के बावजूद स्थिर आय">• Climate resilience • Risk reduction • Stable income despite weather variations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agri-Tech Integration -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Digital Agriculture & AgriTech" data-hi="डिजिटल कृषि और एग्रीटेक">Digital Agriculture & AgriTech</h3>
+                        <div class="origin-badge" data-en="🇰🇷 South Korea / 🇩🇰 Denmark" data-hi="🇰🇷 दक्षिण कोरिया / 🇩🇰 डेनमार्क">🇰🇷 South Korea / 🇩🇰 Denmark</div>
+                        <p class="technique-description" data-en="Using mobile apps, AI, and IoT devices for farm management, market access, and decision support." data-hi="फार्म प्रबंधन, बाजार पहुंच और निर्णय समर्थन के लिए मोबाइल ऐप, AI और IoT उपकरणों का उपयोग।">Using mobile apps, AI, and IoT devices for farm management, market access, and decision support.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Use Kisan Suvidha app for weather, prices, and advisory" data-hi="मौसम, कीमतों और सलाह के लिए किसान सुविधा ऐप का उपयोग करें">Use <strong>Kisan Suvidha</strong> app for weather, prices, and advisory</li>
+                                <li data-en="Access e-NAM platform for better market prices" data-hi="बेहतर बाजार कीमतों के लिए e-NAM प्लेटफॉर्म का उपयोग करें">Access <strong>e-NAM platform</strong> for better market prices</li>
+                                <li data-en="Use Crop Doctor apps for disease identification" data-hi="रोग पहचान के लिए क्रॉप डॉक्टर ऐप का उपयोग करें">Use <strong>Crop Doctor</strong> apps for disease identification</li>
+                                <li data-en="Leverage PM-KISAN and DBT systems for subsidies" data-hi="सब्सिडी के लिए PM-KISAN और DBT सिस्टम का लाभ उठाएं">Leverage <strong>PM-KISAN</strong> and <strong>DBT</strong> systems for subsidies</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• Better market access • Real-time information • Reduced middleman dependency" data-hi="• बेहतर बाजार पहुंच • वास्तविक समय की जानकारी • बिचौलियों पर निर्भरता में कमी">• Better market access • Real-time information • Reduced middleman dependency</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controlled Environment Agriculture -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Controlled Environment Agriculture" data-hi="नियंत्रित वातावरण कृषि">Controlled Environment Agriculture</h3>
+                        <div class="origin-badge" data-en="🇳🇱 Netherlands / 🇨🇦 Canada" data-hi="🇳🇱 नीदरलैंड / 🇨🇦 कनाडा">🇳🇱 Netherlands / 🇨🇦 Canada</div>
+                        <p class="technique-description" data-en="Growing crops in greenhouses and polyhouses with controlled temperature, humidity, and lighting." data-hi="ग्रीनहाउस और पॉलीहाउस में नियंत्रित तापमान, आर्द्रता और प्रकाश के साथ फसल उगाना।">Growing crops in greenhouses and polyhouses with controlled temperature, humidity, and lighting.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Start with low-cost polyhouses (₹800-1200/sq.m)" data-hi="कम लागत वाले पॉलीहाउस से शुरुआत करें (₹800-1200/वर्ग मी.)">Start with low-cost <strong>polyhouses</strong> (₹800-1200/sq.m)</li>
+                                <li data-en="Grow high-value crops like bell peppers, cucumbers, tomatoes" data-hi="शिमला मिर्च, खीरा, टमाटर जैसी उच्च मूल्य वाली फसलें उगाएं">Grow high-value crops like <strong>bell peppers, cucumbers, tomatoes</strong></li>
+                                <li data-en="Access 50% subsidy under MIDH scheme" data-hi="MIDH योजना के तहत 50% सब्सिडी प्राप्त करें">Access 50% subsidy under <strong>MIDH scheme</strong></li>
+                                <li data-en="Use natural ventilation instead of expensive climate control" data-hi="महंगे जलवायु नियंत्रण के बजाय प्राकृतिक वेंटिलेशन का उपयोग करें">Use natural ventilation instead of expensive climate control</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• 3-4x higher yields • Protection from weather • Premium market prices" data-hi="• 3-4 गुना अधिक उपज • मौसम से सुरक्षा • प्रीमियम बाजार मूल्य">• 3-4x higher yields • Protection from weather • Premium market prices</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aquaponics -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Aquaponics & Integrated Farming" data-hi="एक्वापोनिक्स और एकीकृत खेती">Aquaponics & Integrated Farming</h3>
+                        <div class="origin-badge" data-en="🇦🇺 Australia / 🇹🇭 Thailand" data-hi="🇦🇺 ऑस्ट्रेलिया / 🇹🇭 थाईलैंड">🇦🇺 Australia / 🇹🇭 Thailand</div>
+                        <p class="technique-description" data-en="Combining aquaculture (fish farming) with hydroponics (soilless plant cultivation) in a symbiotic system." data-hi="एक सहजीवी प्रणाली में जलीय कृषि (मछली पालन) को हाइड्रोपोनिक्स (मिट्टी रहित पौधों की खेती) के साथ जोड़ना।">Combining aquaculture (fish farming) with hydroponics (soilless plant cultivation) in a symbiotic system.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Use local fish species like Rohu, Catla, Tilapia" data-hi="रोहू, कतला, तिलापिया जैसी स्थानीय मछली प्रजातियों का उपयोग करें">Use local fish species like <strong>Rohu, Catla, Tilapia</strong></li>
+                                <li data-en="Combine with traditional crops like rice-fish systems" data-hi="धान-मछली प्रणाली जैसी पारंपरिक फसलों के साथ जोड़ें">Combine with traditional crops like <strong>rice-fish</strong> systems</li>
+                                <li data-en="Start small with 100-200 sq.ft systems" data-hi="100-200 वर्ग फीट सिस्टम के साथ छोटे से शुरुआत करें">Start small with 100-200 sq.ft systems</li>
+                                <li data-en="Access training through fisheries departments and KVKs" data-hi="मत्स्य पालन विभागों और KVKs के माध्यम से प्रशिक्षण प्राप्त करें">Access training through <strong>fisheries departments</strong> and KVKs</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• Dual income from fish and vegetables • Efficient water usage • Year-round production" data-hi="• मछली और सब्जियों से दोहरी आय • कुशल जल उपयोग • साल भर उत्पादन">• Dual income from fish and vegetables • Efficient water usage • Year-round production</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regenerative Agriculture -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Regenerative Agriculture" data-hi="पुनर्योजी कृषि">Regenerative Agriculture</h3>
+                        <div class="origin-badge" data-en="🇺🇸 USA / 🇦🇷 Argentina" data-hi="🇺🇸 अमेरिका / 🇦🇷 अर्जेंटीना">🇺🇸 USA / 🇦🇷 Argentina</div>
+                        <p class="technique-description" data-en="Farming practices focused on rebuilding soil health, increasing biodiversity, and capturing carbon." data-hi="मिट्टी के स्वास्थ्य के पुनर्निर्माण, जैव विविधता बढ़ाने और कार्बन कैप्चर पर केंद्रित खेती की प्रथाएं।">Farming practices focused on rebuilding soil health, increasing biodiversity, and capturing carbon.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Practice multi-cropping and agroforestry" data-hi="बहु-फसली और कृषि वानिकी का अभ्यास करें">Practice <strong>multi-cropping</strong> and <strong>agroforestry</strong></li>
+                                <li data-en="Use organic inputs and jeevamrut preparations" data-hi="जैविक इनपुट और जीवामृत तैयारी का उपयोग करें">Use organic inputs and <strong>jeevamrut</strong> preparations</li>
+                                <li data-en="Integrate livestock with crop production" data-hi="फसल उत्पादन के साथ पशुधन को एकीकृत करें">Integrate livestock with crop production</li>
+                                <li data-en="Access support through PKVY and organic farming schemes" data-hi="PKVY और जैविक खेती योजनाओं के माध्यम से सहायता प्राप्त करें">Access support through <strong>PKVY</strong> and organic farming schemes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• Improved soil fertility • Carbon credit opportunities • Sustainable long-term farming" data-hi="• मिट्टी की उर्वरता में सुधार • कार्बन क्रेडिट के अवसर • दीर्घकालिक टिकाऊ खेती">• Improved soil fertility • Carbon credit opportunities • Sustainable long-term farming</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blockchain & Supply Chain -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Blockchain in Agriculture" data-hi="कृषि में ब्लॉकचेन">Blockchain in Agriculture</h3>
+                        <div class="origin-badge" data-en="🇪🇸 Spain / 🇨🇭 Switzerland" data-hi="🇪🇸 स्पेन / 🇨🇭 स्विट्जरलैंड">🇪🇸 Spain / 🇨🇭 Switzerland</div>
+                        <p class="technique-description" data-en="Using blockchain technology for supply chain transparency, traceability, and fair pricing." data-hi="आपूर्ति श्रृंखला पारदर्शिता, पता लगाने की क्षमता और निष्पक्ष मूल्य निर्धारण के लिए ब्लॉकचेन तकनीक का उपयोग।">Using blockchain technology for supply chain transparency, traceability, and fair pricing.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Start with QR code-based simple traceability systems" data-hi="QR कोड-आधारित सरल ट्रेसेबिलिटी सिस्टम से शुरुआत करें">Start with <strong>QR code-based</strong> simple traceability systems</li>
+                                <li data-en="Join FPO cooperatives for collective blockchain adoption" data-hi="सामूहिक ब्लॉकचेन अपनाने के लिए FPO सहकारी समितियों में शामिल हों">Join <strong>FPO cooperatives</strong> for collective blockchain adoption</li>
+                                <li data-en="Use platforms like AgriChain for supply chain management" data-hi="आपूर्ति श्रृंखला प्रबंधन के लिए AgriChain जैसे प्लेटफॉर्म का उपयोग करें">Use platforms like <strong>AgriChain</strong> for supply chain management</li>
+                                <li data-en="Focus on export-oriented and premium crops initially" data-hi="शुरू में निर्यात-उन्मुख और प्रीमियम फसलों पर ध्यान दें">Focus on export-oriented and premium crops initially</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• Better price realization • Direct market access • Building consumer trust" data-hi="• बेहतर मूल्य प्राप्ति • प्रत्यक्ष बाजार पहुंच • उपभोक्ता विश्वास निर्माण">• Better price realization • Direct market access • Building consumer trust</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Robotics & Automation -->
+                <div class="technique-card">
+                    <div class="technique-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="technique-content">
+                        <h3 data-en="Agricultural Robotics" data-hi="कृषि रोबोटिक्स">Agricultural Robotics</h3>
+                        <div class="origin-badge" data-en="🇯🇵 Japan / 🇩🇪 Germany" data-hi="🇯🇵 जापान / 🇩🇪 जर्मनी">🇯🇵 Japan / 🇩🇪 Germany</div>
+                        <p class="technique-description" data-en="Automated machines for seeding, weeding, harvesting, and crop monitoring to reduce labor dependency." data-hi="श्रम निर्भरता को कम करने के लिए बुवाई, निराई, कटाई और फसल निगरानी के लिए स्वचालित मशीनें।">Automated machines for seeding, weeding, harvesting, and crop monitoring to reduce labor dependency.</p>
+                        
+                        <div class="indian-adaptation">
+                            <h4 data-en="🇮🇳 Indian Adaptation:" data-hi="🇮🇳 भारतीय अनुकूलन:">🇮🇳 Indian Adaptation:</h4>
+                            <ul>
+                                <li data-en="Start with semi-automated tools like power weeders" data-hi="पावर वीडर जैसे अर्ध-स्वचालित उपकरणों से शुरुआत करें">Start with semi-automated tools like <strong>power weeders</strong></li>
+                                <li data-en="Use drone spraying services available in many districts" data-hi="कई जिलों में उपलब्ध ड्रोन स्प्रेइंग सेवाओं का उपयोग करें">Use <strong>drone spraying services</strong> available in many districts</li>
+                                <li data-en="Access machinery through Custom Hiring Centers" data-hi="कस्टम हायरिंग सेंटर के माध्यम से मशीनरी का उपयोग करें">Access machinery through <strong>Custom Hiring Centers</strong></li>
+                                <li data-en="Focus on labor-intensive operations first (weeding, harvesting)" data-hi="पहले श्रम-गहन कार्यों पर ध्यान दें (निराई, कटाई)">Focus on labor-intensive operations first (weeding, harvesting)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefits">
+                            <h4 data-en="Benefits for Indian Farmers:" data-hi="भारतीय किसानों के लिए लाभ:">Benefits for Indian Farmers:</h4>
+                            <p data-en="• Reduced labor costs • Precision in operations • Timely farm activities" data-hi="• श्रम लागत में कमी • संचालन में सटीकता • समय पर खेती गतिविधियां">• Reduced labor costs • Precision in operations • Timely farm activities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation Guide -->
+            <div class="implementation-guide">
+                <h3 class="guide-title" data-en="How to Start Your Modern Farming Journey" data-hi="अपनी आधुनिक खेती की यात्रा कैसे शुरू करें">How to Start Your Modern Farming Journey</h3>
+                <div class="implementation-steps">
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 data-en="Start Small" data-hi="छोटे से शुरुआत करें">Start Small</h4>
+                        <p data-en="Begin with one technique on a small plot (0.25-0.5 acres) to test and learn before scaling up." data-hi="बड़े पैमाने पर शुरू करने से पहले परीक्षण और सीखने के लिए एक छोटे भूखंड (0.25-0.5 एकड़) पर एक तकनीक से शुरुआत करें।">Begin with one technique on a small plot (0.25-0.5 acres) to test and learn before scaling up.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4 data-en="Get Training" data-hi="प्रशिक्षण प्राप्त करें">Get Training</h4>
+                        <p data-en="Attend training programs at KVKs, agriculture universities, and farmer producer organizations." data-hi="KVKs, कृषि विश्वविद्यालयों और किसान उत्पादक संगठनों में प्रशिक्षण कार्यक्रमों में भाग लें।">Attend training programs at KVKs, agriculture universities, and farmer producer organizations.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 data-en="Form Groups" data-hi="समूह बनाएं">Form Groups</h4>
+                        <p data-en="Join or form farmer groups to share costs, knowledge, and access government schemes collectively." data-hi="लागत, ज्ञान साझा करने और सामूहिक रूप से सरकारी योजनाओं तक पहुंचने के लिए किसान समूहों में शामिल हों या बनाएं।">Join or form farmer groups to share costs, knowledge, and access government schemes collectively.</p>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 data-en="Monitor & Scale" data-hi="निगरानी और विस्तार करें">Monitor & Scale</h4>
+                        <p data-en="Track results, calculate returns, and gradually expand successful techniques to larger areas." data-hi="परिणामों को ट्रैक करें, रिटर्न की गणना करें और सफल तकनीकों को धीरे-धीरे बड़े क्षेत्रों में विस्तारित करें।">Track results, calculate returns, and gradually expand successful techniques to larger areas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Stories -->
+            <div class="success-stories">
+                <h3 data-en="Success Stories from Indian Farmers" data-hi="भारतीय किसानों की सफलता की कहानियां">Success Stories from Indian Farmers</h3>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <h4 data-en="🏆 Ramesh Kumar, Punjab" data-hi="🏆 रमेश कुमार, पंजाब">🏆 Ramesh Kumar, Punjab</h4>
+                        <p><strong data-en="Precision Agriculture:" data-hi="सटीक कृषि:">Precision Agriculture:</strong> <span data-en="Reduced fertilizer costs by 25% and increased wheat yield by 15% using GPS-guided variable rate application." data-hi="GPS-निर्देशित परिवर्तनशील दर अनुप्रयोग का उपयोग करके उर्वरक लागत में 25% की कमी और गेहूं की उपज में 15% की वृद्धि की।">Reduced fertilizer costs by 25% and increased wheat yield by 15% using GPS-guided variable rate application.</span></p>
+                    </div>
+                    <div class="story-card">
+                        <h4 data-en="🏆 Sunita Devi, Maharashtra" data-hi="🏆 सुनीता देवी, महाराष्ट्र">🏆 Sunita Devi, Maharashtra</h4>
+                        <p><strong data-en="Drip Irrigation:" data-hi="ड्रिप सिंचाई:">Drip Irrigation:</strong> <span data-en="Saved 40% water and doubled onion yield, earning ₹3 lakh additional income per acre." data-hi="40% पानी की बचत की और प्याज की उपज दोगुनी की, प्रति एकड़ ₹3 लाख अतिरिक्त आय अर्जित की।">Saved 40% water and doubled onion yield, earning ₹3 lakh additional income per acre.</span></p>
+                    </div>
+                    <div class="story-card">
+                        <h4 data-en="🏆 Mohan Patel, Gujarat" data-hi="🏆 मोहन पटेल, गुजरात">🏆 Mohan Patel, Gujarat</h4>
+                        <p><strong data-en="Polyhouse Farming:" data-hi="पॉलीहाउस खेती:">Polyhouse Farming:</strong> <span data-en="Growing bell peppers year-round, earning ₹8-10 lakh per acre compared to ₹1-2 lakh in open field." data-hi="साल भर शिमला मिर्च उगाकर खुले मैदान में ₹1-2 लाख की तुलना में प्रति एकड़ ₹8-10 लाख कमाई।">Growing bell peppers year-round, earning ₹8-10 lakh per acre compared to ₹1-2 lakh in open field.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Farmer Genius Logo" class="logo-image">
+                        <span data-en="Farmer Genius" data-hi="किसान जीनियस">Farmer Genius</span>
+                    </div>
+                    <p data-en="Smart solutions for modern farming. Empowering farmers with technology and knowledge." data-hi="आधुनिक कृषि के लिए स्मार्ट समाधान। प्रौद्योगिकी और ज्ञान के साथ किसानों को सशक्त बनाना।">Smart solutions for modern farming. Empowering farmers with technology and knowledge.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-en="Home" data-hi="होम">Home</a></li>
+                        <li><a href="tools.html" data-en="Farming Tools" data-hi="कृषि उपकरण">Farming Tools</a></li>
+                        <li><a href="schemes.html" data-en="Government Schemes" data-hi="सरकारी योजनाएं">Government Schemes</a></li>
+                        <li><a href="modern-farming.html" data-en="Modern Farming" data-hi="आधुनिक कृषि">Modern Farming</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-en="Contact Info" data-hi="संपर्क जानकारी">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@farmergenius.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-en="&copy; 2024 Farmer Genius. All rights reserved." data-hi="&copy; 2024 किसान जीनियस। सभी अधिकार सुरक्षित।">&copy; 2024 Farmer Genius. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Assistant Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i>
+                <span data-en="Farm AI Assistant" data-hi="फार्म AI सहायक">Farm AI Assistant</span>
+            </div>
+            <button class="chat-close" onclick="toggleChatWidget()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p data-en="Hello! I'm your AI farming assistant. Ask me about modern farming techniques, technology adoption, or any agricultural questions!" data-hi="नमस्ते! मैं आपका AI कृषि सहायक हूं। मुझसे आधुनिक खेती तकनीकों, प्रौद्योगिकी अपनाने या कोई भी कृषि प्रश्न पूछें!">Hello! I'm your AI farming assistant. Ask me about modern farming techniques, technology adoption, or any agricultural questions!</p>
+                    <div class="quick-questions">
+                        <button class="quick-btn" onclick="askQuickQuestion('How to start precision farming?')" data-en="Precision Farming?" data-hi="सटीक कृषि?">Precision Farming?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('Best drip irrigation setup?')" data-en="Drip Irrigation?" data-hi="ड्रिप सिंचाई?">Drip Irrigation?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('Polyhouse farming costs?')" data-en="Polyhouse Costs?" data-hi="पॉलीहाउस लागत?">Polyhouse Costs?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Ask about modern farming..." maxlength="200" data-en-placeholder="Ask about modern farming..." data-hi-placeholder="आधुनिक खेती के बारे में पूछें...">
+            <button class="chat-send" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <div id="chat-button" class="chat-floating-btn" onclick="toggleChatWidget()">
+        <i class="fas fa-comments"></i>
+        <div class="chat-notification" data-en="Ask AI" data-hi="AI पूछें">Ask AI</div>
+        <div class="chat-pulse"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Tools - Farmer Genius</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Adjust body padding for tools page */
+        body {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Toggle Button -->
+    <button class="nav-toggle" id="navToggle" onclick="toggleNavigation()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Farmer Genius Logo" class="logo-image">
+                <span data-en="Farmer Genius" data-hi="किसान जीनियस">Farmer Genius</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item" style="--delay: 1;"><a href="index.html" class="nav-link" data-en="Home" data-hi="होम">Home</a></li>
+                <li class="nav-item" style="--delay: 2;"><a href="tools.html" class="nav-link active" data-en="Farming Tools" data-hi="कृषि उपकरण">Farming Tools</a></li>
+                <li class="nav-item" style="--delay: 3;"><a href="schemes.html" class="nav-link" data-en="Government Schemes" data-hi="सरकारी योजनाएं">Government Schemes</a></li>
+                <li class="nav-item" style="--delay: 4;"><a href="modern-farming.html" class="nav-link" data-en="Modern Farming" data-hi="आधुनिक कृषि">Modern Farming</a></li>
+                <li class="nav-item" style="--delay: 5;"><a href="knowledge.html" class="nav-link" data-en="Knowledge Hub" data-hi="ज्ञान केंद्र">Knowledge Hub</a></li>
+                <li class="nav-item" style="--delay: 6;"><a href="helpline.html" class="nav-link" data-en="Helpline" data-hi="हेल्पलाइन">Helpline</a></li>
+                <li class="nav-item" style="--delay: 7;"><a href="settings.html" class="nav-link" data-en="Settings" data-hi="सेटिंग्स">Settings</a></li>
+                <li class="nav-item" style="--delay: 8;"><a href="#" class="nav-link" onclick="toggleChatWidget()" data-en="AI Assistant" data-hi="AI सहायक">AI Assistant</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tools Section -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Smart Farming Tools" data-hi="स्मार्ट कृषि उपकरण">Smart Farming Tools</h2>
+                <p class="section-description" data-en="Calculate and plan your farming needs with our intelligent tools" data-hi="हमारे बुद्धिमान उपकरणों के साथ अपनी कृषि आवश्यकताओं की गणना करें और योजना बनाएं">Calculate and plan your farming needs with our intelligent tools</p>
+            </div>
+            
+            <div class="tools-grid">
+                <!-- Seed Quality Checker -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 data-en="🌱 Seed Quality Checker" data-hi="🌱 बीज गुणवत्ता जांचकर्ता">🌱 Seed Quality Checker</h3>
+                    <p data-en="Learn how to check seed quality with simple farmer-level tests" data-hi="सरल किसान-स्तरीय परीक्षणों के साथ बीज की गुणवत्ता की जांच करना सीखें">Learn how to check seed quality with simple farmer-level tests</p>
+                    
+                    <div class="calculator">
+                        <div class="input-group">
+                            <label data-en="Select Seed Type:" data-hi="बीज का प्रकार चुनें:">Select Seed Type:</label>
+                            <select id="seed-select" class="input-field" onchange="updateSeedSelectLanguage()">
+                                <option value="">Choose seed / बीज चुनें</option>
+                                <option value="wheat">Wheat / गेहूं</option>
+                                <option value="rice">Rice / धान</option>
+                                <option value="corn">Maize / मक्का</option>
+                                <option value="cotton">Cotton / कपास</option>
+                                <option value="mustard">Mustard / सरसों</option>
+                                <option value="soybean">Soybean / सोयाबीन</option>
+                                <option value="groundnut">Groundnut / मूंगफली</option>
+                                <option value="sugarcane">Sugarcane / गन्ना</option>
+                                <option value="chickpea">Chickpea / चना</option>
+                                <option value="lentil">Lentil / मसूर</option>
+                                <option value="pigeon_pea">Pigeon Pea / अरहर</option>
+                                <option value="black_gram">Black Gram / उड़द</option>
+                                <option value="green_gram">Green Gram / मूंग</option>
+                                <option value="tomato">Tomato / टमाटर</option>
+                                <option value="potato">Potato / आलू</option>
+                                <option value="onion">Onion / प्याज</option>
+                                <option value="chili">Chili / मिर्च</option>
+                                <option value="brinjal">Brinjal / बैंगन</option>
+                                <option value="okra">Okra / भिंडी</option>
+                                <option value="cabbage">Cabbage / पत्तागोभी</option>
+                                <option value="cauliflower">Cauliflower / फूलगोभी</option>
+                                <option value="carrot">Carrot / गाजर</option>
+                                <option value="radish">Radish / मूली</option>
+                                <option value="spinach">Spinach / पालक</option>
+                                <option value="sunflower">Sunflower / सूरजमुखी</option>
+                                <option value="sesame">Sesame / तिल</option>
+                                <option value="safflower">Safflower / कुसुम</option>
+                                <option value="castor">Castor / अरंडी</option>
+                                <option value="barley">Barley / जौ</option>
+                                <option value="pearl_millet">Pearl Millet / बाजरा</option>
+                            </select>
+                        </div>
+                        <button class="calc-btn" onclick="checkSeedQuality()">
+                            <i class="fas fa-search"></i>
+                            <span data-en="Check Quality Tests" data-hi="गुणवत्ता परीक्षण देखें">Check Quality Tests</span>
+                        </button>
+                        <div id="seed-quality-result" class="result"></div>
+                    </div>
+                </div>
+
+                <!-- Crop Disease Identifier -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3 data-en="🐛 Crop Disease Identifier" data-hi="🐛 फसल रोग पहचानकर्ता">🐛 Crop Disease Identifier</h3>
+                    <p data-en="Identify crop diseases and find solutions" data-hi="फसलों की बीमारियों की पहचान करें और समाधान खोजें">Identify crop diseases and find solutions</p>
+                    
+                    <div class="calculator">
+                        <div class="input-group">
+                            <label data-en="Select Crop:" data-hi="फसल चुनें:">Select Crop:</label>
+                            <select id="disease-crop-select" class="input-field" onchange="populateDiseaseDropdown()">
+                                <option value="">Choose crop / फसल चुनें</option>
+                                <option value="rice">Rice / धान</option>
+                                <option value="wheat">Wheat / गेहूं</option>
+                                <option value="corn">Maize / मक्का</option>
+                                <option value="cotton">Cotton / कपास</option>
+                                <option value="sugarcane">Sugarcane / गन्ना</option>
+                                <option value="tomato">Tomato / टमाटर</option>
+                                <option value="potato">Potato / आलू</option>
+                                <option value="onion">Onion / प्याज</option>
+                                <option value="chili">Chili / मिर्च</option>
+                                <option value="brinjal">Brinjal / बैंगन</option>
+                                <option value="okra">Okra / भिंडी</option>
+                                <option value="chickpea">Chickpea / चना</option>
+                                <option value="mustard">Mustard / सरसों</option>
+                                <option value="soybean">Soybean / सोयाबीन</option>
+                                <option value="groundnut">Groundnut / मूंगफली</option>
+                                <option value="banana">Banana / केला</option>
+                                <option value="mango">Mango / आम</option>
+                                <option value="grapes">Grapes / अंगूर</option>
+                                <option value="pomegranate">Pomegranate / अनार</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label data-en="Select Disease:" data-hi="रोग चुनें:">Select Disease:</label>
+                            <select id="disease-select" class="input-field" disabled>
+                                <option value="">First select a crop / पहले फसल चुनें</option>
+                            </select>
+                        </div>
+                        <button class="calc-btn" onclick="searchDisease()">
+                            <i class="fas fa-search"></i>
+                            <span data-en="Find Disease Info" data-hi="रोग की जानकारी खोजें">Find Disease Info</span>
+                        </button>
+                        <div id="disease-result" class="result"></div>
+                    </div>
+                </div>
+
+                <!-- Fertilizer Calculator -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 data-en="💧 Fertilizer Calculator" data-hi="💧 उर्वरक कैलकुलेटर">💧 Fertilizer Calculator</h3>
+                    <p data-en="Calculate the exact amount of fertilizer needed for your crops" data-hi="अपनी फसलों के लिए आवश्यक उर्वरक की सटीक मात्रा की गणना करें">Calculate the exact amount of fertilizer needed for your crops</p>
+                    
+                    <div class="calculator">
+                        <div class="input-group">
+                            <label data-en="Select Crop:" data-hi="फसल चुनें:">Select Crop:</label>
+                            <select id="crop-select" class="input-field">
+                                <option value="">Choose crop / फसल चुनें</option>
+                                <option value="rice">🍚 Rice / धान</option>
+                                <option value="wheat">🌾 Wheat / गेहूं</option>
+                                <option value="corn">🌽 Corn / मक्का</option>
+                                <option value="tomato">🍅 Tomato / टमाटर</option>
+                                <option value="potato">🥔 Potato / आलू</option>
+                                <option value="cotton">☁️ Cotton / कपास</option>
+                                <option value="sugarcane">🎋 Sugarcane / गन्ना</option>
+                                <option value="soybean">🟤 Soybean / सोयाबीन</option>
+                                <option value="mustard">🟡 Mustard / सरसों</option>
+                                <option value="groundnut">🥜 Groundnut / मूंगफली</option>
+                                <option value="onion">🧅 Onion / प्याज</option>
+                                <option value="garlic">🧄 Garlic / लहसुन</option>
+                                <option value="chili">🌶️ Chili / मिर्च</option>
+                                <option value="cabbage">🥬 Cabbage / पत्तागोभी</option>
+                                <option value="cauliflower">🥬 Cauliflower / फूलगोभी</option>
+                                <option value="brinjal">🍆 Brinjal / बैंगन</option>
+                                <option value="okra">🌶️ Okra / भिंडी</option>
+                                <option value="carrot">🥕 Carrot / गाजर</option>
+                                <option value="radish">🥕 Radish / मूली</option>
+                                <option value="spinach">🥬 Spinach / पालक</option>
+                                <option value="banana">🍌 Banana / केला</option>
+                                <option value="mango">🥭 Mango / आम</option>
+                                <option value="orange">🍊 Orange / संतरा</option>
+                                <option value="apple">🍎 Apple / सेब</option>
+                                <option value="grapes">🍇 Grapes / अंगूर</option>
+                                <option value="papaya">🧡 Papaya / पपीता</option>
+                                <option value="guava">🍃 Guava / अमरूद</option>
+                                <option value="pomegranate">🔴 Pomegranate / अनार</option>
+                                <option value="chickpea">🟤 Chickpea / चना</option>
+                                <option value="lentil">🟤 Lentil / मसूर</option>
+                                <option value="pigeon_pea">🟤 Pigeon Pea / अरहर</option>
+                                <option value="black_gram">⚫ Black Gram / उड़द</option>
+                                <option value="green_gram">🟢 Green Gram / मूंग</option>
+                                <option value="field_pea">🟢 Field Pea / मटर</option>
+                                <option value="sesame">⚪ Sesame / तिल</option>
+                                <option value="sunflower">🌻 Sunflower / सूरजमुखी</option>
+                                <option value="safflower">🟡 Safflower / कुसुम</option>
+                                <option value="castor">🟤 Castor / अरंडी</option>
+                                <option value="coconut">🥥 Coconut / नारियल</option>
+                                <option value="arecanut">🟤 Arecanut / सुपारी</option>
+                                <option value="cardamom">🟢 Cardamom / इलायची</option>
+                                <option value="black_pepper">⚫ Black Pepper / काली मिर्च</option>
+                                <option value="turmeric">🟡 Turmeric / हल्दी</option>
+                                <option value="ginger">🟡 Ginger / अदरक</option>
+                                <option value="coriander">🟢 Coriander / धनिया</option>
+                                <option value="cumin">🟤 Cumin / जीरा</option>
+                                <option value="fenugreek">🟡 Fenugreek / मेथी</option>
+                                <option value="fennel">🟢 Fennel / सौंफ</option>
+                                <option value="jute">🟢 Jute / जूट</option>
+                                <option value="tea">🍃 Tea / चाय</option>
+                                <option value="coffee">🟤 Coffee / कॉफी</option>
+                                <option value="rubber">⚪ Rubber / रबर</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label data-en="Area (acres):" data-hi="क्षेत्र (एकड़):">Area (acres):</label>
+                            <input type="number" id="area-input" class="input-field" placeholder="Enter area / क्षेत्र दर्ज करें">
+                        </div>
+                        <button class="calc-btn" onclick="calculateFertilizer()">
+                            <i class="fas fa-calculator"></i>
+                            <span data-en="Calculate" data-hi="गणना करें">Calculate</span>
+                        </button>
+                        <div id="fertilizer-result" class="result"></div>
+                    </div>
+                </div>
+
+                <!-- Seed Calculator -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 data-en="🌾 Seed Calculator" data-hi="🌾 बीज कैलकुलेटर">🌾 Seed Calculator</h3>
+                    <p data-en="Calculate the exact amount of seeds needed for your land area" data-hi="अपने खेत के क्षेत्र के लिए आवश्यक बीजों की सटीक मात्रा की गणना करें">Calculate the exact amount of seeds needed for your land area</p>
+                    
+                    <div class="calculator">
+                        <div class="input-group">
+                            <label data-en="Select Seed Type:" data-hi="बीज का प्रकार चुनें:">Select Seed Type:</label>
+                            <select id="seed-calc-select" class="input-field">
+                                <option value="">Choose seed type / बीज का प्रकार चुनें</option>
+                                <!-- Cereals -->
+                                <option value="rice">🍚 Rice (Paddy)</option>
+                                <option value="wheat">🌾 Wheat</option>
+                                <option value="maize">🌽 Maize (Corn)</option>
+                                <option value="barley">🌾 Barley</option>
+                                <option value="sorghum">🌾 Sorghum (Jowar)</option>
+                                <option value="pearl_millet">🌾 Pearl Millet (Bajra)</option>
+                                <option value="finger_millet">🌾 Finger Millet (Ragi)</option>
+                                <!-- Pulses -->
+                                <option value="chickpea">🟤 Chickpea (Chana)</option>
+                                <option value="lentil">🟤 Lentil (Masoor)</option>
+                                <option value="pigeon_pea">🟤 Pigeon Pea (Arhar)</option>
+                                <option value="black_gram">⚫ Black Gram (Urad)</option>
+                                <option value="green_gram">🟢 Green Gram (Moong)</option>
+                                <option value="field_pea">🟢 Field Pea</option>
+                                <option value="kidney_bean">🔴 Kidney Bean (Rajma)</option>
+                                <!-- Oilseeds -->
+                                <option value="mustard">🟡 Mustard</option>
+                                <option value="groundnut">🥜 Groundnut (Peanut)</option>
+                                <option value="soybean">🟤 Soybean</option>
+                                <option value="sunflower">🌻 Sunflower</option>
+                                <option value="sesame">⚪ Sesame (Til)</option>
+                                <option value="safflower">🟡 Safflower</option>
+                                <option value="castor">🟤 Castor</option>
+                                <option value="linseed">🟤 Linseed (Flax)</option>
+                                <option value="niger">⚫ Niger Seed</option>
+                                <!-- Cash Crops -->
+                                <option value="cotton">☁️ Cotton</option>
+                                <option value="sugarcane">🎋 Sugarcane</option>
+                                <option value="jute">🟢 Jute</option>
+                                <option value="tobacco">🟤 Tobacco</option>
+                                <!-- Vegetables -->
+                                <option value="tomato">🍅 Tomato</option>
+                                <option value="potato">🥔 Potato</option>
+                                <option value="onion">🧅 Onion</option>
+                                <option value="garlic">🧄 Garlic</option>
+                                <option value="chili">🌶️ Chili</option>
+                                <option value="cabbage">🥬 Cabbage</option>
+                                <option value="cauliflower">🥬 Cauliflower</option>
+                                <option value="brinjal">🍆 Brinjal (Eggplant)</option>
+                                <option value="okra">🫛 Okra (Ladyfinger)</option>
+                                <option value="carrot">🥕 Carrot</option>
+                                <option value="radish">🥕 Radish</option>
+                                <option value="spinach">🥬 Spinach</option>
+                                <option value="pumpkin">🎃 Pumpkin</option>
+                                <option value="bitter_gourd">🥒 Bitter Gourd</option>
+                                <option value="bottle_gourd">🥒 Bottle Gourd</option>
+                                <option value="cucumber">🥒 Cucumber</option>
+                                <option value="peas">🟢 Peas</option>
+                                <option value="beans">🫘 Beans</option>
+                                <!-- Spices -->
+                                <option value="turmeric">🟡 Turmeric</option>
+                                <option value="ginger">🫚 Ginger</option>
+                                <option value="coriander">🟢 Coriander</option>
+                                <option value="cumin">🟤 Cumin</option>
+                                <option value="fenugreek">🟡 Fenugreek</option>
+                                <option value="fennel">🟢 Fennel</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label data-en="Land Area (acres):" data-hi="भूमि क्षेत्र (एकड़):">Land Area (acres):</label>
+                            <input type="number" id="seed-land-area" class="input-field" placeholder="Enter land area / भूमि क्षेत्र दर्ज करें" step="0.1" min="0.1">
+                        </div>
+                        <button class="calc-btn" onclick="calculateSeedAmount()">
+                            <i class="fas fa-calculator"></i>
+                            <span data-en="Calculate Seeds" data-hi="बीजों की गणना करें">Calculate Seeds</span>
+                        </button>
+                        <div id="seed-calc-result" class="result"></div>
+                    </div>
+                </div>
+
+                <!-- Irrigation Planner -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 data-en="🚿 Irrigation Planner" data-hi="🚿 सिंचाई योजनाकार">🚿 Irrigation Planner</h3>
+                    <p data-en="Plan your water requirements and irrigation schedule for your crops" data-hi="अपनी फसलों के लिए पानी की आवश्यकताओं और सिंचाई कार्यक्रम की योजना बनाएं">Plan your water requirements and irrigation schedule for your crops</p>
+                    
+                    <div class="calculator">
+                        <div class="input-group">
+                            <label data-en="Land Size (acres):" data-hi="भूमि आकार (एकड़):">Land Size (acres):</label>
+                            <input type="number" id="land-size" class="input-field" placeholder="Enter land size / भूमि आकार दर्ज करें">
+                        </div>
+                        <div class="input-group">
+                            <label data-en="Crop Type:" data-hi="फसल का प्रकार:">Crop Type:</label>
+                            <select id="irrigation-crop" class="input-field">
+                                <option value="">Choose crop...</option>
+                                <option value="rice">🍚 Rice</option>
+                                <option value="wheat">🌾 Wheat</option>
+                                <option value="corn">🌽 Corn</option>
+                                <option value="cotton">☁️ Cotton</option>
+                                <option value="sugarcane">🎋 Sugarcane</option>
+                                <option value="soybean">🟤 Soybean</option>
+                                <option value="mustard">🟡 Mustard</option>
+                                <option value="groundnut">🥜 Groundnut</option>
+                                <option value="tomato">🍅 Tomato</option>
+                                <option value="potato">🥔 Potato</option>
+                                <option value="onion">🧅 Onion</option>
+                                <option value="garlic">🧄 Garlic</option>
+                                <option value="chili">🌶️ Chili</option>
+                                <option value="cabbage">🥬 Cabbage</option>
+                                <option value="cauliflower">🥬 Cauliflower</option>
+                                <option value="brinjal">🍆 Brinjal</option>
+                                <option value="okra">🌶️ Okra</option>
+                                <option value="carrot">🥕 Carrot</option>
+                                <option value="radish">🥕 Radish</option>
+                                <option value="spinach">🥬 Spinach</option>
+                                <option value="banana">🍌 Banana</option>
+                                <option value="mango">🥭 Mango</option>
+                                <option value="orange">🍊 Orange</option>
+                                <option value="apple">🍎 Apple</option>
+                                <option value="grapes">🍇 Grapes</option>
+                                <option value="papaya">🧡 Papaya</option>
+                                <option value="guava">🍃 Guava</option>
+                                <option value="pomegranate">🔴 Pomegranate</option>
+                                <option value="chickpea">🟤 Chickpea</option>
+                                <option value="lentil">🟤 Lentil</option>
+                                <option value="pigeon_pea">🟤 Pigeon Pea</option>
+                                <option value="black_gram">⚫ Black Gram</option>
+                                <option value="green_gram">🟢 Green Gram</option>
+                                <option value="field_pea">🟢 Field Pea</option>
+                                <option value="sesame">⚪ Sesame</option>
+                                <option value="sunflower">🌻 Sunflower</option>
+                                <option value="safflower">🟡 Safflower</option>
+                                <option value="castor">🟤 Castor</option>
+                                <option value="coconut">🥥 Coconut</option>
+                                <option value="arecanut">🟤 Arecanut</option>
+                                <option value="cardamom">🟢 Cardamom</option>
+                                <option value="black_pepper">⚫ Black Pepper</option>
+                                <option value="turmeric">🟡 Turmeric</option>
+                                <option value="ginger">🟡 Ginger</option>
+                                <option value="coriander">🟢 Coriander</option>
+                                <option value="cumin">🟤 Cumin</option>
+                                <option value="fenugreek">🟡 Fenugreek</option>
+                                <option value="fennel">🟢 Fennel</option>
+                                <option value="jute">🟢 Jute</option>
+                                <option value="tea">🍃 Tea</option>
+                                <option value="coffee">🟤 Coffee</option>
+                                <option value="rubber">⚪ Rubber</option>
+                            </select>
+                        </div>
+                        <button class="calc-btn" onclick="calculateIrrigation()">
+                            <i class="fas fa-calculator"></i>
+                            <span data-en="Calculate Water Need" data-hi="पानी की आवश्यकता की गणना करें">Calculate Water Need</span>
+                        </button>
+                        <div id="irrigation-result" class="result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crop Calendar -->
+    <section id="crop-calendar" class="crop-calendar-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Crop Calendar" data-hi="फसल कैलेंडर">Crop Calendar</h2>
+                <p class="section-description" data-en="Know the best time to plant and harvest your crops" data-hi="अपनी फसलों को बोने और काटने का सबसे अच्छा समय जानें">Know the best time to plant and harvest your crops</p>
+            </div>
+            
+            <div class="calendar-container">
+                <table class="crop-table">
+                    <thead>
+                        <tr>
+                            <th data-en="Crop" data-hi="फसल">Crop</th>
+                            <th data-en="Planting Season" data-hi="बुवाई का मौसम">Planting Season</th>
+                            <th data-en="Growing Period" data-hi="बढ़ने की अवधि">Growing Period</th>
+                            <th data-en="Harvest Time" data-hi="कटाई का समय">Harvest Time</th>
+                            <th data-en="Best Climate" data-hi="सबसे अच्छी जलवायु">Best Climate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-seedling"></i> Rice</td>
+                            <td>Jun - Jul</td>
+                            <td>120-140 days</td>
+                            <td>Oct - Nov</td>
+                            <td>Tropical, Warm</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-wheat-awn"></i> Wheat</td>
+                            <td>Nov - Dec</td>
+                            <td>120-150 days</td>
+                            <td>Mar - Apr</td>
+                            <td>Cool, Dry</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-corn"></i> Corn</td>
+                            <td>Jun - Jul</td>
+                            <td>90-120 days</td>
+                            <td>Sep - Oct</td>
+                            <td>Warm, Moderate Rain</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-carrot"></i> Potato</td>
+                            <td>Oct - Nov</td>
+                            <td>90-120 days</td>
+                            <td>Jan - Feb</td>
+                            <td>Cool, Well-drained</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-apple-alt"></i> Tomato</td>
+                            <td>Jul - Aug</td>
+                            <td>60-90 days</td>
+                            <td>Oct - Nov</td>
+                            <td>Warm, Sunny</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-leaf"></i> Cotton</td>
+                            <td>Apr - May</td>
+                            <td>160-200 days</td>
+                            <td>Oct - Dec</td>
+                            <td>Hot, Long Season</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soil Test Guide -->
+    <section id="soil-guide" class="soil-guide-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Soil Test Guide" data-hi="मिट्टी परीक्षण गाइड">Soil Test Guide</h2>
+                <p class="section-description" data-en="Step-by-step guide to test and improve your soil quality" data-hi="अपनी मिट्टी की गुणवत्ता की जांच और सुधार के लिए चरण-दर-चरण गाइड">Step-by-step guide to test and improve your soil quality</p>
+            </div>
+            
+            <div class="guide-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 data-en="Sample Collection" data-hi="नमूना संग्रह">Sample Collection</h3>
+                        <p data-en="Collect soil samples from different parts of your field at 6-8 inch depth. Mix samples thoroughly and take 500g for testing." data-hi="अपने खेत के विभिन्न हिस्सों से 6-8 इंच की गहराई पर मिट्टी के नमूने एकत्र करें। नमूनों को अच्छी तरह मिलाएं और परीक्षण के लिए 500 ग्राम लें।">Collect soil samples from different parts of your field at 6-8 inch depth. Mix samples thoroughly and take 500g for testing.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-flask"></i>
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 data-en="Laboratory Testing" data-hi="प्रयोगशाला परीक्षण">Laboratory Testing</h3>
+                        <p data-en="Take samples to nearest soil testing laboratory or use soil health card services. Tests include pH, organic carbon, NPK levels." data-hi="नमूने निकटतम मिट्टी परीक्षण प्रयोगशाला में ले जाएं या मृदा स्वास्थ्य कार्ड सेवाओं का उपयोग करें। परीक्षणों में पीएच, जैविक कार्बन, एनपीके स्तर शामिल हैं।">Take samples to nearest soil testing laboratory or use soil health card services. Tests include pH, organic carbon, NPK levels.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-chart-line"></i>
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 data-en="Report Analysis" data-hi="रिपोर्ट विश्लेषण">Report Analysis</h3>
+                        <p data-en="Understand your soil health report. Check pH levels (6.5-7.5 ideal), nutrient status, and organic matter content." data-hi="अपनी मिट्टी स्वास्थ्य रिपोर्ट को समझें। पीएच स्तर (6.5-7.5 आदर्श), पोषक तत्व स्थिति और कार्बनिक पदार्थ सामग्री की जांच करें।">Understand your soil health report. Check pH levels (6.5-7.5 ideal), nutrient status, and organic matter content.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-seedling"></i>
+                        <span class="step-number">4</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 data-en="Soil Improvement" data-hi="मिट्टी सुधार">Soil Improvement</h3>
+                        <p data-en="Apply recommendations: lime for acidic soil, organic manure for nutrient deficiency, and appropriate fertilizers as suggested." data-hi="सिफारिशें लागू करें: अम्लीय मिट्टी के लिए चूना, पोषक तत्वों की कमी के लिए जैविक खाद, और सुझाए गए अनुसार उचित उर्वरक।">Apply recommendations: lime for acidic soil, organic manure for nutrient deficiency, and appropriate fertilizers as suggested.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-redo"></i>
+                        <span class="step-number">5</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 data-en="Regular Monitoring" data-hi="नियमित निगरानी">Regular Monitoring</h3>
+                        <p data-en="Test soil annually before major planting season. Monitor changes and adjust farming practices accordingly for optimal crop yield." data-hi="प्रमुख बुवाई के मौसम से पहले मिट्टी का वार्षिक परीक्षण करें। परिवर्तनों की निगरानी करें और इष्टतम फसल उपज के लिए कृषि प्रथाओं को तदनुसार समायोजित करें।">Test soil annually before major planting season. Monitor changes and adjust farming practices accordingly for optimal crop yield.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Farmer Genius Logo" class="logo-image">
+                        <span data-en="Farmer Genius" data-hi="किसान जीनियस">Farmer Genius</span>
+                    </div>
+                    <p data-en="Smart solutions for modern farming. Empowering farmers with technology and knowledge." data-hi="आधुनिक कृषि के लिए स्मार्ट समाधान। प्रौद्योगिकी और ज्ञान के साथ किसानों को सशक्त बनाना।">Smart solutions for modern farming. Empowering farmers with technology and knowledge.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-en="Contact Info" data-hi="संपर्क जानकारी">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@farmergenius.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-en="&copy; 2025 Farmer Genius. All rights reserved." data-hi="&copy; 2025 किसान जीनियस। सभी अधिकार सुरक्षित।">&copy; 2025 Farmer Genius. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Assistant Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i>
+                <span data-en="Farm AI Assistant" data-hi="कृषि AI सहायक">Farm AI Assistant</span>
+            </div>
+            <button class="chat-close" onclick="toggleChatWidget()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p data-en="Hello! I'm your AI farming assistant. Ask me about crops, fertilizers, irrigation, or any farming questions!" data-hi="नमस्ते! मैं आपका AI कृषि सहायक हूं। मुझसे फसलों, उर्वरकों, सिंचाई या किसी भी कृषि प्रश्न के बारे में पूछें!">Hello! I'm your AI farming assistant. Ask me about crops, fertilizers, irrigation, or any farming questions!</p>
+                    <div class="quick-questions">
+                        <button class="quick-btn" onclick="askQuickQuestion('Which crop is best for my soil?')" data-en="Best crop for soil?" data-hi="मिट्टी के लिए सबसे अच्छी फसल?">Best crop for soil?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('How much water does wheat need?')" data-en="Wheat water needs?" data-hi="गेहूं को कितना पानी चाहिए?">Wheat water needs?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('When to plant rice?')" data-en="Rice planting time?" data-hi="धान बोने का समय?">Rice planting time?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Ask your farming question... / अपना कृषि प्रश्न पूछें..." maxlength="200">
+            <button class="chat-send" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <div id="chat-button" class="chat-floating-btn" onclick="toggleChatWidget()">
+        <i class="fas fa-comments"></i>
+        <div class="chat-notification" data-en="Ask AI" data-hi="AI से पूछें">Ask AI</div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Schemes - Farmer Genius</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Toggle Button -->
+    <button class="nav-toggle" id="navToggle" onclick="toggleNavigation()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Farmer Genius Logo" class="logo-image">
+                <span data-en="Farmer Genius" data-hi="किसान जीनियस">Farmer Genius</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item" style="--delay: 1;"><a href="index.html" class="nav-link" data-en="Home" data-hi="होम">Home</a></li>
+                <li class="nav-item" style="--delay: 2;"><a href="tools.html" class="nav-link" data-en="Farming Tools" data-hi="कृषि उपकरण">Farming Tools</a></li>
+                <li class="nav-item" style="--delay: 3;"><a href="schemes.html" class="nav-link active" data-en="Government Schemes" data-hi="सरकारी योजनाएं">Government Schemes</a></li>
+                <li class="nav-item" style="--delay: 4;"><a href="modern-farming.html" class="nav-link" data-en="Modern Farming" data-hi="आधुनिक कृषि">Modern Farming</a></li>
+                <li class="nav-item" style="--delay: 5;"><a href="knowledge.html" class="nav-link" data-en="Knowledge Hub" data-hi="ज्ञान केंद्र">Knowledge Hub</a></li>
+                <li class="nav-item" style="--delay: 6;"><a href="helpline.html" class="nav-link" data-en="Helpline" data-hi="हेल्पलाइन">Helpline</a></li>
+                <li class="nav-item" style="--delay: 7;"><a href="settings.html" class="nav-link" data-en="Settings" data-hi="सेटिंग्स">Settings</a></li>
+                <li class="nav-item" style="--delay: 8;"><a href="#" class="nav-link" onclick="toggleChatWidget()" data-en="AI Assistant" data-hi="AI सहायक">AI Assistant</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-en="Government Schemes for Farmers" data-hi="किसानों के लिए सरकारी योजनाएं">Government Schemes for Farmers</h1>
+            <p class="page-subtitle" data-en="Comprehensive guide to agricultural schemes and subsidies available in India" data-hi="भारत में उपलब्ध कृषि योजनाओं और सब्सिडी की व्यापक मार्गदर्शिका">Comprehensive guide to agricultural schemes and subsidies available in India</p>
+        </div>
+    </section>
+
+    <!-- Government Schemes Section -->
+    <section class="schemes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Major Agricultural Schemes" data-hi="प्रमुख कृषि योजनाएं">Major Agricultural Schemes</h2>
+                <p class="section-description" data-en="Stay updated with the latest government schemes and subsidies to boost your farming income" data-hi="अपनी खेती की आय बढ़ाने के लिए नवीनतम सरकारी योजनाओं और सब्सिडी की जानकारी रखें">Stay updated with the latest government schemes and subsidies to boost your farming income</p>
+            </div>
+            
+            <div class="schemes-grid">
+                <!-- PM-KISAN Scheme -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3 data-en="PM-KISAN Samman Nidhi" data-hi="पीएम-किसान सम्मान निधि">PM-KISAN Samman Nidhi</h3>
+                    <p data-en="Direct income support to all landholding farmer families in the country to supplement their financial needs for agriculture and allied activities." data-hi="देश में सभी भूमिधारक किसान परिवारों को कृषि और संबद्ध गतिविधियों के लिए उनकी वित्तीय आवश्यकताओं को पूरा करने हेतु प्रत्यक्ष आय सहायता।">Direct income support to all landholding farmer families in the country to supplement their financial needs for agriculture and allied activities.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Benefit:" data-hi="लाभ:">Benefit:</strong> <span data-en="₹6,000 per year in 3 installments" data-hi="प्रति वर्ष ₹6,000 तीन किश्तों में">₹6,000 per year in 3 installments</span></p>
+                        <p><strong data-en="Eligibility:" data-hi="पात्रता:">Eligibility:</strong> <span data-en="All landholding farmers" data-hi="सभी भूमिधारक किसान">All landholding farmers</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="pmkisan.gov.in" data-hi="pmkisan.gov.in">pmkisan.gov.in</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="₹6,000 Annual" data-hi="₹6,000 वार्षिक">₹6,000 Annual</div>
+                </div>
+
+                <!-- PMFBY Scheme -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-en="PM Fasal Bima Yojana" data-hi="पीएम फसल बीमा योजना">PM Fasal Bima Yojana</h3>
+                    <p data-en="Comprehensive crop insurance scheme providing financial support to farmers in case of crop loss due to natural calamities, pests, and diseases." data-hi="प्राकृतिक आपदाओं, कीटों और बीमारियों के कारण फसल नुकसान की स्थिति में किसानों को वित्तीय सहायता प्रदान करने वाली व्यापक फसल बीमा योजना।">Comprehensive crop insurance scheme providing financial support to farmers in case of crop loss due to natural calamities, pests, and diseases.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Premium:" data-hi="प्रीमियम:">Premium:</strong> <span data-en="2% for Kharif, 1.5% for Rabi" data-hi="खरीफ के लिए 2%, रबी के लिए 1.5%">2% for Kharif, 1.5% for Rabi</span></p>
+                        <p><strong data-en="Coverage:" data-hi="कवरेज:">Coverage:</strong> <span data-en="All crops and risks" data-hi="सभी फसलें और जोखिम">All crops and risks</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="pmfby.gov.in" data-hi="pmfby.gov.in">pmfby.gov.in</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Crop Insurance" data-hi="फसल बीमा">Crop Insurance</div>
+                </div>
+
+                <!-- Soil Health Card -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 data-en="Soil Health Card Scheme" data-hi="मृदा स्वास्थ्य कार्ड योजना">Soil Health Card Scheme</h3>
+                    <p data-en="Free soil testing and nutrient-based fertilizer recommendations to improve soil health and reduce input costs for farmers." data-hi="मिट्टी के स्वास्थ्य में सुधार और किसानों के लिए इनपुट लागत कम करने हेतु मुफ्त मिट्टी परीक्षण और पोषक तत्व आधारित उर्वरक सिफारिशें।">Free soil testing and nutrient-based fertilizer recommendations to improve soil health and reduce input costs for farmers.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Benefit:" data-hi="लाभ:">Benefit:</strong> <span data-en="Free soil testing every 3 years" data-hi="हर 3 साल में मुफ्त मिट्टी परीक्षण">Free soil testing every 3 years</span></p>
+                        <p><strong data-en="Covers:" data-hi="कवर करता है:">Covers:</strong> <span data-en="12 soil parameters" data-hi="12 मिट्टी पैरामीटर">12 soil parameters</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="Local agriculture office" data-hi="स्थानीय कृषि कार्यालय">Local agriculture office</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Free Testing" data-hi="मुफ्त परीक्षण">Free Testing</div>
+                </div>
+
+                <!-- KCC Loan -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3 data-en="Kisan Credit Card (KCC)" data-hi="किसान क्रेडिट कार्ड (KCC)">Kisan Credit Card (KCC)</h3>
+                    <p data-en="Flexible credit facility for farmers to meet their short-term credit requirements including crop production, post-harvest expenses, and marketing." data-hi="किसानों के लिए फसल उत्पादन, कटाई के बाद के खर्च और विपणन सहित उनकी अल्पकालिक ऋण आवश्यकताओं को पूरा करने के लिए लचीली ऋण सुविधा।">Flexible credit facility for farmers to meet their short-term credit requirements including crop production, post-harvest expenses, and marketing.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Interest Rate:" data-hi="ब्याज दर:">Interest Rate:</strong> <span data-en="7% (4% with subsidy)" data-hi="7% (सब्सिडी के साथ 4%)">7% (4% with subsidy)</span></p>
+                        <p><strong data-en="Limit:" data-hi="सीमा:">Limit:</strong> <span data-en="Based on land holding" data-hi="भूमि जोत के आधार पर">Based on land holding</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="Any bank branch" data-hi="किसी भी बैंक शाखा में">Any bank branch</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Low Interest" data-hi="कम ब्याज">Low Interest</div>
+                </div>
+
+                <!-- PM-KUSUM -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3 data-en="PM-KUSUM Yojana" data-hi="पीएम-कुसुम योजना">PM-KUSUM Yojana</h3>
+                    <p data-en="Solar agriculture scheme providing financial support for solar pumps, grid-connected solar plants, and solar power plants on agricultural land." data-hi="सौर कृषि योजना जो सौर पंपों, ग्रिड-कनेक्टेड सौर संयंत्रों और कृषि भूमि पर सौर ऊर्जा संयंत्रों के लिए वित्तीय सहायता प्रदान करती है।">Solar agriculture scheme providing financial support for solar pumps, grid-connected solar plants, and solar power plants on agricultural land.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Subsidy:" data-hi="सब्सिडी:">Subsidy:</strong> <span data-en="Up to 60% of cost" data-hi="लागत का 60% तक">Up to 60% of cost</span></p>
+                        <p><strong data-en="Covers:" data-hi="कवर करता है:">Covers:</strong> <span data-en="Solar pumps and plants" data-hi="सौर पंप और संयंत्र">Solar pumps and plants</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="State electricity boards" data-hi="राज्य बिजली बोर्ड">State electricity boards</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Solar Power" data-hi="सौर ऊर्जा">Solar Power</div>
+                </div>
+
+                <!-- National Agriculture Market -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 data-en="e-NAM (National Agriculture Market)" data-hi="ई-नाम (राष्ट्रीय कृषि बाज़ार)">e-NAM (National Agriculture Market)</h3>
+                    <p data-en="Online marketing platform for agricultural commodities allowing farmers to sell their produce directly to buyers at better prices." data-hi="कृषि वस्तुओं के लिए ऑनलाइन विपणन मंच जो किसानों को अपनी उपज सीधे खरीदारों को बेहतर कीमतों पर बेचने की अनुमति देता है।">Online marketing platform for agricultural commodities allowing farmers to sell their produce directly to buyers at better prices.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Benefit:" data-hi="लाभ:">Benefit:</strong> <span data-en="Better price discovery" data-hi="बेहतर मूल्य खोज">Better price discovery</span></p>
+                        <p><strong data-en="Access:" data-hi="पहुंच:">Access:</strong> <span data-en="1000+ mandis" data-hi="1000+ मंडियां">1000+ mandis</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="enam.gov.in" data-hi="enam.gov.in">enam.gov.in</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Online Market" data-hi="ऑनलाइन बाजार">Online Market</div>
+                </div>
+
+                <!-- Micro Irrigation -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 data-en="Micro Irrigation Scheme" data-hi="सूक्ष्म सिंचाई योजना">Micro Irrigation Scheme</h3>
+                    <p data-en="Financial assistance for installation of drip and sprinkler irrigation systems to improve water use efficiency and increase productivity." data-hi="जल उपयोग दक्षता में सुधार और उत्पादकता बढ़ाने के लिए ड्रिप और स्प्रिंकलर सिंचाई प्रणालियों की स्थापना हेतु वित्तीय सहायता।">Financial assistance for installation of drip and sprinkler irrigation systems to improve water use efficiency and increase productivity.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Subsidy:" data-hi="सब्सिडी:">Subsidy:</strong> <span data-en="55% for general farmers" data-hi="सामान्य किसानों के लिए 55%">55% for general farmers</span></p>
+                        <p><strong data-en="Additional:" data-hi="अतिरिक्त:">Additional:</strong> <span data-en="20% for SC/ST farmers" data-hi="SC/ST किसानों के लिए 20%">20% for SC/ST farmers</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="District agriculture office" data-hi="जिला कृषि कार्यालय">District agriculture office</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Water Saving" data-hi="जल बचत">Water Saving</div>
+                </div>
+
+                <!-- Farm Mechanization -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3 data-en="Sub-Mission on Agricultural Mechanization" data-hi="कृषि यंत्रीकरण पर उप-मिशन">Sub-Mission on Agricultural Mechanization</h3>
+                    <p data-en="Financial assistance for purchase of agricultural machinery and equipment to promote farm mechanization and reduce drudgery." data-hi="कृषि यंत्रीकरण को बढ़ावा देने और मेहनत कम करने के लिए कृषि मशीनरी और उपकरण खरीदने हेतु वित्तीय सहायता।">Financial assistance for purchase of agricultural machinery and equipment to promote farm mechanization and reduce drudgery.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Subsidy:" data-hi="सब्सिडी:">Subsidy:</strong> <span data-en="40-50% of cost" data-hi="लागत का 40-50%">40-50% of cost</span></p>
+                        <p><strong data-en="Covers:" data-hi="कवर करता है:">Covers:</strong> <span data-en="Tractors, harvesters, etc." data-hi="ट्रैक्टर, हार्वेस्टर, आदि">Tractors, harvesters, etc.</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="District collector office" data-hi="जिला कलेक्टर कार्यालय">District collector office</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Equipment Subsidy" data-hi="उपकरण सब्सिडी">Equipment Subsidy</div>
+                </div>
+
+                <!-- Organic Farming -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 data-en="Paramparagat Krishi Vikas Yojana" data-hi="परंपरागत कृषि विकास योजना">Paramparagat Krishi Vikas Yojana</h3>
+                    <p data-en="Promotes organic farming by providing financial assistance for organic inputs, certification, and marketing support for organic produce." data-hi="जैविक इनपुट, प्रमाणन और जैविक उपज के विपणन समर्थन के लिए वित्तीय सहायता प्रदान करके जैविक खेती को बढ़ावा देता है।">Promotes organic farming by providing financial assistance for organic inputs, certification, and marketing support for organic produce.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Support:" data-hi="सहायता:">Support:</strong> <span data-en="₹50,000 per hectare" data-hi="₹50,000 प्रति हेक्टेयर">₹50,000 per hectare</span></p>
+                        <p><strong data-en="Duration:" data-hi="अवधि:">Duration:</strong> <span data-en="3 years" data-hi="3 साल">3 years</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="Agriculture department" data-hi="कृषि विभाग">Agriculture department</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Organic Support" data-hi="जैविक समर्थन">Organic Support</div>
+                </div>
+
+                <!-- Animal Husbandry -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-cow"></i>
+                    </div>
+                    <h3 data-en="National Livestock Mission" data-hi="राष्ट्रीय पशुधन मिशन">National Livestock Mission</h3>
+                    <p data-en="Comprehensive scheme for development of livestock sector providing support for animal healthcare, breeding, and dairy development." data-hi="पशु स्वास्थ्य देखभाल, प्रजनन और डेयरी विकास के लिए सहायता प्रदान करने वाली पशुधन क्षेत्र के विकास के लिए व्यापक योजना।">Comprehensive scheme for development of livestock sector providing support for animal healthcare, breeding, and dairy development.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Support:" data-hi="सहायता:">Support:</strong> <span data-en="50% of project cost" data-hi="परियोजना लागत का 50%">50% of project cost</span></p>
+                        <p><strong data-en="Covers:" data-hi="कवर करता है:">Covers:</strong> <span data-en="Cattle, buffalo, goat farming" data-hi="गाय, भैंस, बकरी पालन">Cattle, buffalo, goat farming</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="Animal husbandry department" data-hi="पशुपालन विभाग">Animal husbandry department</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Livestock Support" data-hi="पशुधन समर्थन">Livestock Support</div>
+                </div>
+
+                <!-- Horticulture Mission -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 data-en="Mission for Integrated Development of Horticulture" data-hi="बागवानी के एकीकृत विकास के लिए मिशन">Mission for Integrated Development of Horticulture</h3>
+                    <p data-en="Comprehensive development of horticulture sector covering fruits, vegetables, flowers, spices, and plantation crops." data-hi="फलों, सब्जियों, फूलों, मसालों और बागान फसलों को कवर करते हुए बागवानी क्षेत्र का व्यापक विकास।">Comprehensive development of horticulture sector covering fruits, vegetables, flowers, spices, and plantation crops.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Support:" data-hi="सहायता:">Support:</strong> <span data-en="Up to 40% of cost" data-hi="लागत का 40% तक">Up to 40% of cost</span></p>
+                        <p><strong data-en="Covers:" data-hi="कवर करता है:">Covers:</strong> <span data-en="All horticultural activities" data-hi="सभी बागवानी गतिविधियां">All horticultural activities</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="Horticulture department" data-hi="बागवानी विभाग">Horticulture department</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Horticulture" data-hi="बागवानी">Horticulture</div>
+                </div>
+
+                <!-- Storage Infrastructure -->
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 data-en="Gramin Bhandaran Yojana" data-hi="ग्रामीण भंडारण योजना">Gramin Bhandaran Yojana</h3>
+                    <p data-en="Financial assistance for construction of rural godowns and storage infrastructure to reduce post-harvest losses and improve farmers' income." data-hi="कटाई के बाद के नुकसान को कम करने और किसानों की आय में सुधार के लिए ग्रामीण गोदामों और भंडारण बुनियादी ढांचे के निर्माण हेतु वित्तीय सहायता।">Financial assistance for construction of rural godowns and storage infrastructure to reduce post-harvest losses and improve farmers' income.</p>
+                    <div class="scheme-details">
+                        <p><strong data-en="Subsidy:" data-hi="सब्सिडी:">Subsidy:</strong> <span data-en="25% of project cost" data-hi="परियोजना लागत का 25%">25% of project cost</span></p>
+                        <p><strong data-en="Capacity:" data-hi="क्षमता:">Capacity:</strong> <span data-en="100-30,000 tonnes" data-hi="100-30,000 टन">100-30,000 tonnes</span></p>
+                        <p><strong data-en="Apply at:" data-hi="आवेदन करें:">Apply at:</strong> <span data-en="NABARD offices" data-hi="नाबार्ड कार्यालय">NABARD offices</span></p>
+                    </div>
+                    <div class="scheme-benefit" data-en="Storage Support" data-hi="भंडारण समर्थन">Storage Support</div>
+                </div>
+            </div>
+
+            <!-- Application Process Section -->
+            <div class="application-process">
+                <h3 class="process-title" data-en="How to Apply for Government Schemes" data-hi="सरकारी योजनाओं के लिए आवेदन कैसे करें">How to Apply for Government Schemes</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4 data-en="Check Eligibility" data-hi="पात्रता जांचें">Check Eligibility</h4>
+                        <p data-en="Review scheme requirements and ensure you meet all eligibility criteria before applying." data-hi="आवेदन करने से पहले योजना की आवश्यकताओं की समीक्षा करें और सुनिश्चित करें कि आप सभी पात्रता मानदंडों को पूरा करते हैं।">Review scheme requirements and ensure you meet all eligibility criteria before applying.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4 data-en="Gather Documents" data-hi="दस्तावेज़ एकत्र करें">Gather Documents</h4>
+                        <p data-en="Collect required documents like Aadhaar, land records, bank details, and farming certificates." data-hi="आधार, भूमि रिकॉर्ड, बैंक विवरण और खेती प्रमाण पत्र जैसे आवश्यक दस्तावेज एकत्र करें।">Collect required documents like Aadhaar, land records, bank details, and farming certificates.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4 data-en="Submit Application" data-hi="आवेदन जमा करें">Submit Application</h4>
+                        <p data-en="Apply online through respective portals or visit nearest Common Service Center (CSC)." data-hi="संबंधित पोर्टल के माध्यम से ऑनलाइन आवेदन करें या निकटतम कॉमन सर्विस सेंटर (CSC) पर जाएं।">Apply online through respective portals or visit nearest Common Service Center (CSC).</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4 data-en="Track Status" data-hi="स्थिति ट्रैक करें">Track Status</h4>
+                        <p data-en="Monitor your application status online and follow up for any additional requirements." data-hi="अपने आवेदन की स्थिति को ऑनलाइन देखें और किसी भी अतिरिक्त आवश्यकता के लिए फॉलोअप करें।">Monitor your application status online and follow up for any additional requirements.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Help Section -->
+            <div class="help-section">
+                <h3 data-en="Need Help?" data-hi="मदद चाहिए?">Need Help?</h3>
+                <div class="help-content">
+                    <div class="help-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-en="Toll-Free Number" data-hi="टोल-फ्री नंबर">Toll-Free Number</h4>
+                            <p data-en="1800-180-1551 (PM-KISAN Helpline)" data-hi="1800-180-1551 (PM-KISAN हेल्पलाइन)">1800-180-1551 (PM-KISAN Helpline)</p>
+                        </div>
+                    </div>
+                    <div class="help-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-en="Local Office" data-hi="स्थानीय कार्यालय">Local Office</h4>
+                            <p data-en="Visit your nearest agriculture extension office" data-hi="अपने निकटतम कृषि विस्तार कार्यालय पर जाएं">Visit your nearest agriculture extension office</p>
+                        </div>
+                    </div>
+                    <div class="help-item">
+                        <i class="fas fa-laptop"></i>
+                        <div>
+                            <h4 data-en="CSC Centers" data-hi="CSC केंद्र">CSC Centers</h4>
+                            <p data-en="Apply through Common Service Centers in your village" data-hi="अपने गांव में कॉमन सर्विस सेंटर के माध्यम से आवेदन करें">Apply through Common Service Centers in your village</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Farmer Genius Logo" class="logo-image">
+                        <span data-en="Farmer Genius" data-hi="किसान जीनियस">Farmer Genius</span>
+                    </div>
+                    <p data-en="Smart solutions for modern farming. Empowering farmers with technology and knowledge." data-hi="आधुनिक कृषि के लिए स्मार्ट समाधान। प्रौद्योगिकी और ज्ञान के साथ किसानों को सशक्त बनाना।">Smart solutions for modern farming. Empowering farmers with technology and knowledge.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-en="Home" data-hi="होम">Home</a></li>
+                        <li><a href="tools.html" data-en="Farming Tools" data-hi="कृषि उपकरण">Farming Tools</a></li>
+                        <li><a href="schemes.html" data-en="Government Schemes" data-hi="सरकारी योजनाएं">Government Schemes</a></li>
+                        <li><a href="modern-farming.html" data-en="Modern Farming" data-hi="आधुनिक कृषि">Modern Farming</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-en="Contact Info" data-hi="संपर्क जानकारी">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@farmergenius.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-en="&copy; 2024 Farmer Genius. All rights reserved." data-hi="&copy; 2024 किसान जीनियस। सभी अधिकार सुरक्षित।">&copy; 2024 Farmer Genius. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Assistant Chat Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i>
+                <span data-en="Farm AI Assistant" data-hi="फार्म AI सहायक">Farm AI Assistant</span>
+            </div>
+            <button class="chat-close" onclick="toggleChatWidget()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p data-en="Hello! I'm your AI farming assistant. Ask me about government schemes, eligibility criteria, or any farming questions!" data-hi="नमस्ते! मैं आपका AI कृषि सहायक हूं। मुझसे सरकारी योजनाओं, पात्रता मानदंड या कोई भी कृषि प्रश्न पूछें!">Hello! I'm your AI farming assistant. Ask me about government schemes, eligibility criteria, or any farming questions!</p>
+                    <div class="quick-questions">
+                        <button class="quick-btn" onclick="askQuickQuestion('How to apply for PM-KISAN?')" data-en="PM-KISAN Application?" data-hi="PM-KISAN आवेदन?">PM-KISAN Application?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('What is crop insurance?')" data-en="Crop Insurance Info?" data-hi="फसल बीमा जानकारी?">Crop Insurance Info?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('Organic farming subsidies?')" data-en="Organic Subsidies?" data-hi="जैविक सब्सिडी?">Organic Subsidies?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Ask about government schemes..." maxlength="200" data-en-placeholder="Ask about government schemes..." data-hi-placeholder="सरकारी योजनाओं के बारे में पूछें...">
+            <button class="chat-send" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <div id="chat-button" class="chat-floating-btn" onclick="toggleChatWidget()">
+        <i class="fas fa-comments"></i>
+        <div class="chat-notification" data-en="Ask AI" data-hi="AI पूछें">Ask AI</div>
+        <div class="chat-pulse"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
